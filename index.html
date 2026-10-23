@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#080b22" />
+    <title>برای الهامه، از طرف سلما ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --night: #8a4630;
+        --deep: #963d16;
+        --purple: #6d3715;
+        --pink: #e8b27e;
+        --gold: #f2cc8f;
+        --white: #fff8ed;
+        --muted: #e2d0bd;
+        --glass: rgba(216, 147, 28, 0.075);
+        --line: rgba(255, 224, 190, 0.2);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 85px;
+      }
+      body {
+        font-family: "Vazirmatn", Tahoma, sans-serif;
+        color: #c58059;
+        background:
+          radial-gradient(ellipse at 12% 12%, #6b422b 0, transparent 34%),
+          radial-gradient(ellipse at 88% 38%, #4d3827 0, transparent 32%),
+          linear-gradient(180deg, #2c1710, #632911 48%, #725542);
+        line-height: 1.95;
+        overflow-x: hidden;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+      }
+      .stars,
+      .stars:before,
+      .stars:after {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        content: "";
+        z-index: -1;
+        background-image:
+          radial-gradient(3px 3px at 20px 30px, #f2cc8f 50%, transparent 60%),
+          radial-gradient(2px 2px at 80px 120px, #e8b27e 50%, transparent 60%),
+          radial-gradient(2px 2px at 160px 70px, #fff1d8 50%, transparent 60%),
+          radial-gradient(3px 3px at 240px 190px, #b86b3d 50%, transparent 60%);
+        background-size: 290px 240px;
+        opacity: 0.22;
+        animation: twinkle 8s ease-in-out infinite alternate;
+      }
+      .stars:before {
+        transform: translate(80px, 40px) scale(1.3);
+        opacity: 0.2;
+      }
+      .stars:after {
+        transform: translate(-30px, 100px) scale(0.8);
+        opacity: 0.24;
+      }
+      @keyframes twinkle {
+        to {
+          opacity: 0.38;
+        }
+      }
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px clamp(16px, 5vw, 64px);
+        background: rgba(36, 27, 24, 0.88);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        font-weight: 800;
+        color: var(--gold);
+        white-space: nowrap;
+      }
+      .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        overflow-x: auto;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      .nav-links a {
+        white-space: nowrap;
+        transition: 0.25s;
+      }
+      .nav-links a:hover {
+        color: #f5d9ad;
+      }
+      .hero {
+        min-height: 90vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 80px 20px 100px;
+        position: relative;
+        isolation: isolate;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(37, 26, 21, 0.15),
+            rgba(37, 26, 21, 0.35)
+          ),
+          radial-gradient(
+            ellipse at 50% 80%,
+            rgba(184, 107, 61, 0.2),
+            transparent 55%
+          );
+      }
+      .hero:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        width: min(72vw, 540px);
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          rgba(232, 178, 126, 0.15),
+          transparent 68%
+        );
+        filter: blur(8px);
+      }
+      .moon {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #fff0c9, #e8b27e 62%, #b86b3d);
+        box-shadow:
+          0 0 45px #f2cc8f33,
+          0 0 100px #b86b3d22;
+        margin: 0 auto 28px;
+        position: relative;
+      }
+      .moon:after {
+        content: "";
+        position: absolute;
+        inset: -4px 0 4px 18px;
+        border-radius: 50%;
+        background: #39271f;
+      }
+      .eyebrow {
+        color: var(--gold);
+        letter-spacing: 0.04em;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+      }
+      .hero h1 {
+        font-size: clamp(2.3rem, 7vw, 5.3rem);
+        line-height: 1.4;
+        font-weight: 800;
+        background: linear-gradient(110deg, #fff8ed, #e8b27e, #f2cc8f);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .hero p {
+        max-width: 650px;
+        color: var(--muted);
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        margin: 22px auto 30px;
+      }
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 24px;
+        border-radius: 999px;
+        border: 1px solid #e8b27e88;
+        background: linear-gradient(135deg, #b86b3d33, #f2cc8f14);
+        color: var(--white);
+        transition: 0.3s;
+        box-shadow: 0 10px 35px #0002;
+      }
+      .button:hover {
+        transform: translateY(-3px);
+        background: #b86b3d44;
+      }
+      .scroll-hint {
+        display: block;
+        margin-top: 35px;
+        color: #c9b5a0;
+        font-size: 0.8rem;
+      }
+      section {
+        padding: 90px clamp(18px, 7vw, 100px);
+        position: relative;
+      }
+      .section-head {
+        text-align: center;
+        max-width: 760px;
+        margin: 0 auto 42px;
+      }
+      .section-head .number {
+        color: var(--gold);
+        font-size: 0.83rem;
+      }
+      .section-head h2 {
+        font-size: clamp(1.8rem, 4.8vw, 3rem);
+        line-height: 1.5;
+        margin: 8px 0 12px;
+      }
+      .section-head p {
+        color: var(--muted);
+      }
+      .accent {
+        color: #e8b27e;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+        max-width: 1050px;
+        margin: auto;
+      }
+      .card {
+        padding: 28px;
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: linear-gradient(
+          145deg,
+          rgba(255, 239, 216, 0.105),
+          rgba(255, 239, 216, 0.025)
+        );
+        backdrop-filter: blur(9px);
+        box-shadow: 0 18px 55px #120b071c;
+        position: relative;
+        overflow: hidden;
+        transition:
+          transform 0.35s,
+          border-color 0.35s;
+      }
+      .card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 90px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #b86b3d);
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        border-color: #e8b27e77;
+      }
+      .card .emoji {
+        font-size: 2rem;
+        display: block;
+        margin-bottom: 12px;
+      }
+      .card h3 {
+        font-size: 1.2rem;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+      .card p {
+        color: var(--muted);
+      }
+      .wide {
+        grid-column: 1/-1;
+      }
+      .quote {
+        max-width: 850px;
+        margin: 35px auto 0;
+        text-align: center;
+        color: #f7dfc2;
+        font-size: 1.18rem;
+        border-right: 3px solid #b86b3d;
+        padding: 12px 22px;
+      }
+      .eyes-layout {
+        max-width: 1050px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 35px;
+        align-items: center;
+      }
+      .eye-art {
+        min-height: 300px;
+        border-radius: 30px;
+        border: 1px solid var(--line);
+        background: radial-gradient(
+          ellipse at center,
+          #795039,
+          #3b2a21 62%,
+          #241b18
+        );
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        position: relative;
+      }
+      .eye-art:before,
+      .eye-art:after {
+        content: "🍂";
+        position: absolute;
+        color: var(--gold);
+        font-size: 1.5rem;
+        animation: float 5s ease-in-out infinite;
+      }
+      .eye-art:before {
+        top: 25px;
+        right: 35px;
+      }
+      .eye-art:after {
+        bottom: 25px;
+        left: 40px;
+        animation-delay: 1.5s;
+      }
+      .eye-symbol {
+        font-size: clamp(5rem, 15vw, 9rem);
+        filter: drop-shadow(0 0 20px #e8b27e55);
+        transform: rotate(-8deg);
+      }
+      @keyframes float {
+        50% {
+          transform: translateY(-12px) rotate(15deg);
+        }
+      }
+      .copy h3 {
+        font-size: 1.5rem;
+        color: var(--gold);
+        margin-bottom: 12px;
+      }
+      .copy p {
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+      .wish-list {
+        max-width: 850px;
+        margin: auto;
+        display: grid;
+        gap: 15px;
+      }
+      .wish {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 18px 22px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: var(--glass);
+      }
+      .wish span {
+        color: var(--gold);
+        font-size: 1.35rem;
+      }
+      .wish p {
+        color: var(--muted);
+      }
+      .letter-wrap {
+        max-width: 850px;
+        margin: auto;
+        padding: clamp(25px, 5vw, 55px);
+        border: 1px solid #e8b27e66;
+        border-radius: 28px;
+        background: linear-gradient(
+          135deg,
+          rgba(184, 107, 61, 0.14),
+          rgba(242, 204, 143, 0.045)
+        );
+        box-shadow: 0 25px 80px #10090533;
+        position: relative;
+      }
+      .letter-wrap:before {
+        content: "🍁";
+        position: absolute;
+        top: 15px;
+        left: 25px;
+        color: var(--gold);
+        font-size: 1.5rem;
+      }
+      .letter-wrap h3 {
+        font-size: 1.5rem;
+        color: var(--gold);
+        margin-bottom: 20px;
+      }
+      .letter-wrap p {
+        color: #f0dfcd;
+        margin: 0 0 15px;
+      }
+      .signature {
+        color: var(--gold) !important;
+        font-weight: 700;
+        margin-top: 28px !important;
+      }
+      .footer {
+        text-align: center;
+        padding: 45px 20px 65px;
+        color: #c9b5a0;
+        border-top: 1px solid var(--line);
+        font-size: 0.9rem;
+      }
+      .footer strong {
+        color: var(--gold);
+      }
+      #topBtn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 30;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        background: #503625;
+        color: white;
+        cursor: pointer;
+        display: none;
+        box-shadow: 0 8px 25px #0004;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(25px);
+        transition:
+          opacity 0.8s,
+          transform 0.8s;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (max-width: 760px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 8px;
+          padding: 12px 16px;
+        }
+        .nav-links {
+          width: 100%;
+          padding-bottom: 2px;
+        }
+        .hero {
+          min-height: 82vh;
+          padding-top: 65px;
+        }
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .wide {
+          grid-column: auto;
+        }
+        .eyes-layout {
+          grid-template-columns: 1fr;
+        }
+        .eye-art {
+          min-height: 230px;
+        }
+        section {
+          padding-top: 70px;
+          padding-bottom: 70px;
+        }
+        .card {
+          padding: 23px;
+        }
+        .letter-wrap {
+          padding: 28px 22px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *:before,
+        *:after {
+          scroll-behavior: auto !important;
+          animation: none !important;
+          transition: none !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars" aria-hidden="true"></div>
+    <nav class="nav" aria-label="ناوبری اصلی">
+      <a class="brand" href="#home">✦ برای الهامه</a>
+      <div class="nav-links">
+        <a href="#eyes">چشم‌هایت</a><a href="#smile">لبخند تو</a
+        ><a href="#temper">اخلاقت</a><a href="#heart">قلب مهربانت</a
+        ><a href="#wishes">آرزوها</a><a href="#letter">گفته ی من</a>
+      </div>
+    </nav>
+    <main>
+      <header class="hero" id="home">
+        <div>
+          <div class="moon" aria-hidden="true"></div>
+          <div class="eyebrow">یک گوشهٔ کوچک از آسمان، فقط برای تو</div>
+          <h1>برای الهامه جانم،<br />ستارهٔ قشنگِ قصهٔ من ✨</h1>
+          <p>
+            بعضی آدم‌ها شبیه یک اتفاق ساده نیستند؛ شبیه نوری‌اند که بی‌خبر
+            می‌آید و یک گوشهٔ دل آدم را روشن می‌کند. این صفحه را با تمام محبتم
+            برای تو ساختم.
+          </p>
+          <a class="button" href="#eyes">بیا حرف هایم را ورق بزنیم ↓</a>
+          <span class="scroll-hint"
+            >آرام پایین برو؛ اینجا هر بخش یک حرف از دل دارد</span
+          >
+        </div>
+      </header>
+
+      <section id="eyes" class="reveal">
+        <div class="section-head">
+          <div class="number">.... ✧</div>
+          <h2>چشم‌هایی که <span class="accent">حرف می‌زنند</span></h2>
+          <p>بعضی نگاه‌ها را نمی‌شود فقط دید؛ باید حس‌شان کرد.</p>
+        </div>
+        <div class="eyes-layout">
+          <div class="eye-art">
+            <div class="eye-symbol" aria-hidden="true">🤎</div>
+          </div>
+          <div class="copy">
+            <h3>چشم‌های خاص تو</h3>
+            <p>
+              چشم‌هایت یک جور قشنگی دارند که به آسانی در وصف نمی‌آید. انگار پشت
+              آن نگاه، هزار حرف نگفته و یک دنیا احساس پنهان است.
+            </p>
+            <p>
+              گاهی یک نگاه از صد تا جمله بیشتر می‌گوید؛ و من فکر می‌کنم نگاه تو
+              از همان نگاه‌هاست، از آن‌هایی که در خاطر آدم می‌مانند. دوست شان
+              دارم
+            </p>
+          </div>
+        </div>
+        <div class="quote">
+          «بعضی نگاه‌ها مثل ستاره‌اند؛ حتی وقتی چیزی نمی‌گویند، باز هم
+          می‌درخشند.»
+        </div>
+      </section>
+
+      <section id="smile" class="reveal">
+        <div class="section-head">
+          <div class="number">.... ☾</div>
+          <h2>لبخند و چال‌گونه‌های <span class="accent">دل‌بَرَت</span></h2>
+          <p>یک لبخند کوچک، گاهی می‌تواند حال یک روز کامل را عوض کند.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="emoji">🤎</span>
+            <h3>اما لبخندت را بگویم اگر...</h3>
+            <p>
+              روی لَبخَندَت مکث کن چند ثانیه فقط ، بیا به جای من و زُل بزن به
+              خودت ، می بینی؟ عجیب دیوانه میکند آدم را...
+            </p>
+          </article>
+          <article class="card">
+            <span class="emoji">♡</span>
+            <h3>و دیگر اینکه آن چال گونه ی قشنگ</h3>
+            <p>
+              آن جزئیات کوچکی که لبخندت را مخصوص خودت می‌کند؛ مثلا قشنگی چال
+              گونه ات موقع لبخندت . و آن برق خاص چشم هایت ... همان چیزهایی که
+              شاید برای خودت عادی باشد، اما برای کسی دیگر عزیز و دوست‌داشتنی‌ست.
+            </p>
+          </article>
+          <article class="card wide">
+            <p>
+              الهامه جان، امیدوارم دنیا بیشتر بخنداندت تا این‌که دلت را بگیرد.
+              امیدوارم لبخندت همیشه از ته دل باشد، نه برای پنهان کردن
+              خستگی‌هایت.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="temper" class="reveal">
+        <div class="section-head">
+          <div class="number">.... ⚡</div>
+          <h2>اخلاق آتشین، اما <span class="accent">دوست‌داشتنی</span></h2>
+          <p>
+            آدم‌ها فقط با آرام بودن‌شان عزیز نمی‌شوند؛ گاهی همان شیطنت‌ها و
+            تندی‌های‌شان هم بخشی از زیبایی شان است درست مثل تو .دوستت دارم با
+            تمام سرد رفتاری هایت و بی حوصلهگی هایت.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="emoji">🔥</span>
+            <h3>وقتی جوش می‌آوری اما باااز هم دوستت دارم.</h3>
+            <p>
+              گاهی زود عصبانی می‌شوی، گاهی حرفت را محکم می‌زنی؛ اما همین هم بخشی
+              از شخصیت پررنگ و واقعی توست. و جذابیتت را ده برابر تر
+              میکند.برایم...
+            </p>
+          </article>
+          <article class="card">
+            <span class="emoji">🌙</span>
+            <h3>پشت آن تندی‌ها مهربانی هایی ک پنهان داری</h3>
+            <p>
+              گاهی آدم‌ها احساسات‌شان را با اخم و سکوت پنهان می‌کنند. امیدوارم
+              همیشه کسی کنارت باشد که پیش از قضاوت کردن، بخواهد تو را بفهمد.
+            </p>
+          </article>
+        </div>
+        <div class="quote">
+          «دوست داشتن یعنی آدم را با تمام رنگ‌هایش ببینی؛ نه فقط روزهای
+          آفتابی‌اش.»
+        </div>
+      </section>
+
+      <section id="heart" class="reveal">
+        <div class="section-head">
+          <div class="number">.... ♡</div>
+          <h2>قلب مهربانی که <span class="accent">شاید پنهانش کنی</span></h2>
+          <p>
+            گاهی مهربان‌ترین آدم‌ها، خودشان بیشتر از همه به مهربانی نیاز دارند.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="emoji">🫶</span>
+            <h3>مهربانی‌ات</h3>
+            <p>
+              آن بخش لطیف وجودت که شاید هر کسی زود نبیند، اما وقتی دیده شود،
+              ارزشش را می‌فهمی. مهربانی همیشه با حرف‌های بزرگ نیست؛ گاهی در یک
+              توجه کوچک پیدا می‌شود.
+            </p>
+          </article>
+          <article class="card">
+            <span class="emoji">🕊️</span>
+            <h3>حق تو آرامش است</h3>
+            <p>
+              تو هم حق داری خسته شوی، سکوت کنی، از همه فاصله بگیری و کمی به خودت
+              برسی. لازم نیست همیشه قوی باشی یا همه را راضی نگه داری.
+            </p>
+          </article>
+          <article class="card wide">
+            <h3>یک یادآوری کوچک</h3>
+            <p>
+              اگر روزی دلت سنگین شد، یادت باشد ارزش تو به حال خوبت، موفقیتت یا
+              این‌که همیشه لبخند بزنی وابسته نیست. تو حتی در روزهای سختت هم
+              ارزشمند هستی.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="personality" class="reveal">
+        <div class="section-head">
+          <div class="number">....✨</div>
+          <h2>الهامه ، با تمام <span class="accent">رنگ‌های خودش</span></h2>
+          <p>
+            تو فقط یک ویژگی نیستی؛ مجموعه‌ای از حس‌ها، خاطره‌ها، خنده‌ها و
+            روزهایی.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <span class="emoji">🌟</span>
+            <h3>خاص بودنت</h3>
+            <p>
+              قرار نیست شبیه هیچ‌کس باشی. قشنگی تو در همان چیزهایی‌ست که تو را
+              از بقیه متفاوت می‌کند.
+            </p>
+          </article>
+          <article class="card">
+            <span class="emoji">🌷</span>
+            <h3>لطافت و قدرت</h3>
+            <p>
+              می‌توانی هم حساس باشی و هم قوی؛ هم گاهی دلگیر شوی و هم دوباره بلند
+              شوی. این‌ها با هم تناقض ندارند. و این است ک تو را متفاوت تر و
+              زیباتر کرده...
+            </p>
+          </article>
+          <article class="card wide">
+            <span class="emoji">💫</span>
+            <h3>همان خودت بمان</h3>
+            <p>
+              امیدوارم همیشه فرصت داشته باشی خودت باشی؛ بدون این‌که مجبور شوی
+              برای پذیرفته شدن، همهٔ گوشه‌های وجودت را پنهان کنی.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="wishes" class="reveal">
+        <div class="section-head">
+          <div class="number">.... 🌠</div>
+          <h2>آرزوهایی که از ته دل <span class="accent">برایت دارم</span></h2>
+          <p>
+            اگر می‌توانستم چند ستاره از آسمان بردارم و به تو هدیه کنم، آرزوهایم
+            را روی آن‌ها می‌نوشتم.
+          </p>
+        </div>
+        <div class="wish-list">
+          <div class="wish">
+            <span>✦</span>
+            <p>
+              آرزو می‌کنم دلت آن‌قدر آرام باشد که شب‌ها با خیال راحت بخوابی.
+            </p>
+          </div>
+          <div class="wish">
+            <span>✦</span>
+            <p>
+              آرزو می‌کنم آدم‌هایی دوروبرت باشند که حرفت را بشنوند و احساساتت را
+              جدی بگیرند.
+            </p>
+          </div>
+          <div class="wish">
+            <span>✦</span>
+            <p>
+              آرزو می‌کنم به خواسته‌هایی برسی که شاید هنوز با کسی در میان
+              نگذاشته‌ای.
+            </p>
+          </div>
+          <div class="wish">
+            <span>✦</span>
+            <p>
+              آرزو می‌کنم بیشتر بخندی، کمتر خودت را سرزنش کنی و به خودت همان‌قدر
+              محبت کنی که به دیگران می‌کنی.
+            </p>
+          </div>
+          <div class="wish">
+            <span>✦</span>
+            <p>
+              و از همه مهم‌تر، آرزو می‌کنم هر جا که زندگی تو را برد، هیچ‌وقت
+              یادت نرود که چقدر ارزشمند هستی.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="letter" class="reveal">
+        <div class="section-head">
+          <div class="number">.... 💌</div>
+          <h2>
+            یک نامه از <span class="accent">من (سلما)</span> برای الهامه جان.
+          </h2>
+          <p>این یکی را آهسته بخوان؛ از دل نوشته شده.</p>
+        </div>
+        <div class="letter-wrap">
+          <h3>الهامه جانم،</h3>
+          <p>
+            نمی‌دانم این صفحه چقدر می‌تواند احساسم را به تو برساند، اما دلم
+            می‌خواست چیزی برایت بسازم که فقط یک پیام ساده نباشد؛ چیزی که وقتی
+            بازش می‌کنی، بدانی یک نفر با فکر تو وقت گذاشته و خواسته لبخند روی
+            لبت بیاورد.
+          </p>
+          <p>
+            می‌خواستم یادت بیندازم که تو با همهٔ اخلاق‌ها، خنده‌ها، دلخوری‌ها و
+            روزهای کم‌حوصله‌ات، آدمی هستی که می‌شود برایش حرف‌های قشنگ گفت.و
+            کنارش آرام شد لازم نیست همیشه حالت خوب باشد یا همیشه بهترین نسخهٔ
+            خودت باشی.
+          </p>
+          <p>
+            امیدوارم زندگی با تو مهربان باشد. امیدوارم در روزهایی که خسته‌ای، یک
+            دل امن داشته باشی؛ در روزهایی که خوشحالی، کسی باشد که با تو بخندد؛ و
+            در روزهایی که حرفی برای گفتن نداری، مجبور نباشی سکوتت را توضیح بدهی.
+          </p>
+          <p>
+            اگر این صفحه توانست حتی برای چند لحظه لبخندت را بیاورد، برای من
+            کافی‌ست. این همه ستاره و ماه و حرف، فقط یک راه کوچک بود برای گفتن
+            این‌که بودنت قشنگ است و آرزو می‌کنم سهمت از دنیا، آرامش و خوشی‌های
+            واقعی باشد.
+          </p>
+          <p class="signature">با تمام محبتم،<br />سلما ♡</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>ساخته شده با عشق، برای <strong>الهامه</strong> ✦</p>
+      <p>هر ستاره یک آرزو؛ هر آرزو، یک لبخند برای تو.</p>
+    </footer>
+    <button id="topBtn" aria-label="بازگشت به بالای صفحه" title="برگشت به بالا">
+      ↑
+    </button>
+    <script>
+      const revealItems = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.12 },
+        );
+        revealItems.forEach((item) => observer.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add("visible"));
+      }
+      const topBtn = document.getElementById("topBtn");
+      window.addEventListener(
+        "scroll",
+        () => {
+          topBtn.style.display = window.scrollY > 450 ? "block" : "none";
+        },
+        { passive: true },
+      );
+      topBtn.addEventListener("click", () =>
+        window.scrollTo({ top: 0, behavior: "smooth" }),
+      );
+    </script>
+  </body>
+</html>
